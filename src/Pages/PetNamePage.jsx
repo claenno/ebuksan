@@ -21,7 +21,7 @@ const PetNamePage = () => {
       if (error) {
         console.error("Error updating pet:", error);
       } else {
-        navigate("/dashboard");
+        navigate("/intro");
       }
     } catch (error) {
       console.error("Error updating pet:", error);

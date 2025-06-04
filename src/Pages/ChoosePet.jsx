@@ -89,7 +89,7 @@ const Confirmation = ({ isOpen, onClose, onConfirm, selectedPet }) => {
           <img src="/images/questionMarkIcon.png" alt="question mark" />
         </div>
         <div className="text-center text-white text-sm font-bold">
-          <p>Are you sure you want to choose this pet?</p>
+          <p>Sigurado ka na ba na ito ang alagang pipiliin mo?</p>
         </div>
 
         <div className="flex justify-between px-16">
