@@ -135,7 +135,7 @@ const StudentsInformation = () => {
           >
             <option value="All">Lahat</option>
             {schools.map((school) => (
-              <option key={school.id} value={school.school_name}>
+              <option key={school.id} value={school.school_value}>
                 {school.school_name}
               </option>
             ))}
