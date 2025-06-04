@@ -193,7 +193,7 @@ const Header = ({ setIsLoading, setLoadingMessage }) => {
               <Link to="/dashboard">Home</Link>
             </li>
             <li className="text-xl hover:text-white">
-              <Link to="/pet">Pet</Link>
+              <Link to="/pet">Alaga</Link>
             </li>
             <li className="text-xl hover:text-white">
               <Link to="/about">Tungkol sa E-Buksan</Link>
