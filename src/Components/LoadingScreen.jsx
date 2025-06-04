@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const LoadingScreen = ({ message = "Loading..." }) => {
+const LoadingScreen = ({ message = "Nagloload..." }) => {
   return (
     <div
       className="fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 z-50"

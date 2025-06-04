@@ -33,7 +33,7 @@ const PetNamePage = () => {
       <div className="bg-login-background bg-repeat bg-cover bg-center bg-fixed h-screen justify-items-center pt-[100px]">
         <div className="gap-6 flex flex-col items-center w-[287.30px] h-[263px] rounded-[10px] md:w-[402px] md:h-[368px] bg-[url('/images/registrationFormBackground.png')] bg-repeat bg-center">
           <div className="text-center text-white text-sm font-extrabold mt-7">
-            <p>Name your Pet</p>
+            <p>Pangalanan ang iyong alaga</p>
           </div>
           <div className="w-[68.31px] h-[65.51px] bg-white rounded-[500px] justify-center items-center flex">
             <img src={petImage} alt="pet" />
@@ -56,7 +56,7 @@ const PetNamePage = () => {
                 !petName && "bg-gray-400 cursor-not-allowed"
               }`}
             >
-              Confirm
+              Magpatuloy
             </button>
           </div>
         </div>

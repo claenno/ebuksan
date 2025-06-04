@@ -19,10 +19,13 @@ const VerifiedNotification = () => {
           />
           <div className="container text-center mt-[20px]">
             <p className="text-[13px] text-white md:text-xl font-extrabold">
-              Registration completed successfully
+              Hintayin na ma-verify ang iyong account
             </p>
             <p className="text-xs text-white md:text-base">
-              wait for the teacher's approval
+              Ang iyong account ay kasalukuyang sinusuri. Mangyaring maghintay
+              ng ilang minuto at subukang muli. Kung hindi mo pa rin ma-access
+              ang iyong account, mangyaring makipag-ugnayan sa aming support
+              team.
             </p>
           </div>
 
@@ -30,7 +33,7 @@ const VerifiedNotification = () => {
             onClick={okayClick}
             className="mt-[25px] w-[236.97px] h-[30.01px] text-white bg-gradient-to-r from-[#e48335] via-[#f97a53] to-[#ff6475] rounded-[15px]"
           >
-            Okay
+            Magpatuloy
           </button>
         </div>
       </div>

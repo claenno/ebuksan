@@ -111,7 +111,7 @@ const Header = ({ setIsLoading, setLoadingMessage }) => {
             <p className="text-white">E-Buksan | </p>
             {username ? (
               <>
-                <p>Good Day!</p>
+                <p>Magandang araw!</p>
                 <p>{username}</p>
               </>
             ) : (

@@ -150,7 +150,7 @@ const PetPage = () => {
               {/* Rectangle */}
               <div className="relative md:w-[150px] md:h-11 md:left-[45px] w-[109px] h-[32px] text-right pr-5 md:pr-8 border-[#c600c3] border-[5px] bg-[#80007e]">
                 <p className="text-white md:text-2xl text-lg font-extrabold font-['Inter']">
-                  PET
+                  Alaga
                 </p>
 
                 {/* Circle Positioned on the Left */}
@@ -220,7 +220,7 @@ const PetPage = () => {
 
               {/* Experience Bar Below the Tree Trunk */}
               <div className="w-[315px] h-14 md:w-[479px] md:h-[72px] bg-[#80007e] border-[#c600c3] border-4 p-2 mt-5 md:mt-0 flex flex-col justify-center items-center">
-                <p className="text-white font-bold">Experience:</p>
+                <p className="text-white font-bold">Karanasan:</p>
 
                 {/* Progress Bar (Tailwind Utility) */}
                 <div className="relative w-full md:mt-2">
@@ -237,8 +237,8 @@ const PetPage = () => {
                   {/* XP Text Centered */}
                   <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-xs md:text-sm font-bold w-full text-center">
                     {petData?.experience && levelExp
-                      ? `Current XP: ${petData.experience} / ${levelExp}`
-                      : "Loading XP..."}
+                      ? `Kasalukuyang XP: ${petData.experience} / ${levelExp}`
+                      : "Loading ang XP..."}
                   </p>
                 </div>
               </div>
@@ -251,7 +251,9 @@ const PetPage = () => {
       {showEvolveModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white p-5 rounded-md text-center">
-            <h2 className="text-lg font-bold">Your pet has evolved!</h2>
+            <h2 className="text-lg font-bold">
+              Ang iyong alaga ay nag-evolve!
+            </h2>
             <img
               src={getPetImage(petData?.petid, petData?.petlevel)}
               alt="Evolved Pet"
@@ -261,7 +263,7 @@ const PetPage = () => {
               onClick={() => setShowEvolveModal(false)}
               className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"
             >
-              Close
+              Isara
             </button>
           </div>
         </div>
