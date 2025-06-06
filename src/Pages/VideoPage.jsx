@@ -126,10 +126,10 @@ const VideoPage = () => {
         onClose={() => setShowCompletedModal(false)}
       >
         <div className="min-w-[300px] max-w-[320px] sm:min-w-[50%] sm:max-w-[930px] flex flex-col items-center min-h-auto bg-gradient-to-b from-[#ff8978] via-[#fc4d9f] to-[#b834c4] rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] p-8 m-8 sm:p-5">
-          <p className="text-white text-lg sm:text-2xl font-semibold">
-            Natapos mo na ang pagsusulit!
+          <p className="text-white text-lg sm:text-2xl font-semibold text-center">
+            Natapos na ang pagsusulit!
           </p>
-          <p className="text-white text-sm mt-3">
+          <p className="text-white text-sm mt-3 text-center">
             Salamat sa iyong pagsagot. Maaari ka nang magpatuloy sa susunod na
             aralin.
           </p>

@@ -1,3 +1,4 @@
+// ...existing imports...
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -139,28 +140,18 @@ const PetPage = () => {
       {/* Render the rest of the content when not loading */}
       {!isLoading && (
         <div className="w-full min-h-screen bg-[url('/images/petBackground.png')] bg-cover bg-center bg-no-repeat">
-          <button
-            onClick={() => setShowModal(true)}
-            className="absolute top-5 right-5 bg-yellow-500 text-white px-4 py-2 rounded-md"
-          >
-            Level Up
-          </button>
           <div>
             <div className="pl-10 pt-9">
               {/* Rectangle */}
-              <div className="relative md:w-[150px] md:h-11 md:left-[45px] w-[109px] h-[32px] text-right pr-5 md:pr-8 border-[#c600c3] border-[5px] bg-[#80007e]">
-                <p className="text-white md:text-2xl text-lg font-extrabold font-['Inter']">
+              <div className="relative md:w-[150px] md:h-11 md:left-[45px] w-[109px] h-[32px] text-right pr-5 md:pr-8 border-[#c600c3] border-[5px] bg-[#80007e] pl-9">
+                <p className=" text-white md:text-2xl text-lg font-extrabold font-['Inter']">
                   Alaga
                 </p>
 
                 {/* Circle Positioned on the Left */}
                 <div className="absolute top-1/2 -translate-y-1/2 left-[-20px] w-[51px] h-[51px] bg-[#fcce0d] rounded-full border-4 border-[#b68625] flex justify-center items-center">
                   <div className="w-[33px] h-[27px]">
-                    <img
-                      className="absolute top-[-50px] md:top-[-70px] left-1/2 -translate-x-1/2 md:w-[180px] w-[120px] z-10"
-                      src={getPetImage(petData?.petid, petData?.petlevel)}
-                      alt="Pet"
-                    />
+                    <img src="/images/petIcon.png" alt="Pet" />
                   </div>
                 </div>
               </div>
@@ -249,23 +240,72 @@ const PetPage = () => {
 
       {/* Evolution Modal */}
       {showEvolveModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-5 rounded-md text-center">
-            <h2 className="text-lg font-bold">
-              Ang iyong alaga ay nag-evolve!
-            </h2>
-            <img
-              src={getPetImage(petData?.petid, petData?.petlevel)}
-              alt="Evolved Pet"
-              className="w-40 h-40 mx-auto"
-            />
-            <button
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.5,
+              rotate: -10,
+              filter: "blur(10px)",
+            }}
+            animate={{ opacity: 1, scale: 1, rotate: 0, filter: "blur(0px)" }}
+            exit={{ opacity: 0, scale: 0.5, rotate: 10, filter: "blur(10px)" }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              type: "spring",
+              stiffness: 80,
+            }}
+            className="bg-[#c700c3] rounded-lg w-[80%] md:w-[400px] pb-5 shadow-lg text-center relative"
+          >
+            <div className="bg-[#8d00b1] rounded-tl-[10px] rounded-tr-[10px]">
+              <h2 className="text-xl md:text-2xl font-bold text-white p-3 animate-glow">
+                Binabati kita!
+              </h2>
+            </div>
+            <p className="text-black mt-2">
+              Ang iyong alaga ay tumaas ng antas!
+            </p>
+
+            {/* Pet Evolution Images with Magic Glow */}
+            <div className="flex justify-center items-center gap-5 my-4">
+              <motion.img
+                src={getPetImage(petData?.petid, (petData?.petlevel ?? 2) - 1)}
+                alt="Pet Level Before"
+                className="w-20 h-20 md:w-24 md:h-24"
+                initial={{ opacity: 0.5, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1.1 }}
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              />
+              <span className="text-3xl font-bold text-[#80007e] animate-spin-slow">
+                →
+              </span>
+              <motion.img
+                src={getPetImage(petData?.petid, petData?.petlevel)}
+                alt="Pet Level After"
+                className="w-20 h-20 md:w-24 md:h-24"
+                initial={{ opacity: 0.5, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1.1 }}
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              />
+            </div>
+
+            {/* Button to Close Evolution Modal */}
+            <motion.button
               onClick={() => setShowEvolveModal(false)}
-              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"
+              className="bg-gradient-to-r from-[#e48335] via-[#f97a53] to-[#ff6475] text-white px-4 py-2 w-[70%] rounded-full shadow-md relative z-10"
             >
-              Isara
-            </button>
-          </div>
+              OK
+            </motion.button>
+          </motion.div>
         </div>
       )}
     </>

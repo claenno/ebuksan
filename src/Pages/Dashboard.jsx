@@ -117,21 +117,26 @@ const Dashboard = () => {
                 <Link
                   to="/video"
                   state={{
-                    selectedVideo: video, // Pass the full `video` object
-                    onQuizComplete: handleQuizComplete,
+                    selectedVideo: {
+                      ...video,
+                      videoUrl: video.video_url, // Add this line to ensure videoUrl is present
+                      title: video.video_name, // Add this line to ensure title is present
+                      description: video.video_description, // Add this line for description
+                    },
+                    id: video.id,
                   }}
-                  key={video.id} // Use the UUID `id` as the key
+                  key={video.id}
                 >
                   <VideoHolder
-                    id={video.id} // Pass the UUID `id` to VideoHolder
-                    title={video.video_name} // Use the `video_name` column for the title
+                    id={video.id}
+                    title={video.video_name}
                     thumbnail={
                       video.video_thumbnail || "https://via.placeholder.com/240"
                     }
                     videoUrl={video.video_url}
                     description={video.video_description}
                     category={video.video_category}
-                    index={index} // Pass the index for display purposes
+                    index={index}
                     completed={quizResults[video.id] || false}
                   />
                 </Link>

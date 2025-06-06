@@ -72,27 +72,23 @@ const QuizCompletionPopup = ({ username, petData, questions, onClose }) => {
   }
 
   return (
-    <div className="min-w-[50%] max-w-[930px] flex flex-col items-center min-h-[316px] bg-gradient-to-b from-[#ff8978] via-[#fc4d9f] to-[#b834c4] rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] p-4 sm:p-5">
-      <p className="text-white text-lg sm:text-2xl font-semibold">
-        Natapos mo na ang pagsusulit!
+    <div className="min-w-[50%] max-w-[930px] flex flex-col items-center min-h-auto bg-gradient-to-b bg-[#b834c4] rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] p-4 sm:p-5">
+      <p className="text-white font-bold">Nakuha mo ang skor na:</p>
+      <p className="text-yellow-400 text-[38px] font-bold">
+        {petData.score}/{questions.length}
       </p>
-      <p className="text-white text-sm mt-3">Pet Name: {petData.petname}</p>
-      <p className="text-white text-sm">Current Level: {petData.petlevel}</p>
-      <p className="text-white text-sm">
-        Current Experience: {petData.experience}/{expNeeded}
+      <p className="text-white text-[12px]">Tanong</p>
+      <p className="text-[18px] text-yellow-400 mt-3">
+        +{petData.totalExperience} EXP
       </p>
-      <p className="text-white text-sm mt-3">
-        Quiz Score: {petData.score}/{questions.length}
-      </p>
-      <p className="text-white text-sm">
-        Total Experience Earned: {petData.totalExperience}
-      </p>
-      <button
-        onClick={handleAddExperience}
-        className="w-[300px] p-3 rounded-full text-white font-semibold mt-5 bg-gradient-to-r from-[#e48335] via-[#f97a53] to-[#ff6475]"
-      >
-        Magpatuloy
-      </button>
+      <div>
+        <button
+          onClick={handleAddExperience}
+          className="w-[300px] p-3 rounded-full text-white font-semibold mt-5 bg-gradient-to-r from-[#e48335] via-[#f97a53] to-[#ff6475]"
+        >
+          Magpatuloy
+        </button>
+      </div>
     </div>
   );
 };
