@@ -40,8 +40,15 @@ const RegistrationForm = () => {
     ]);
 
     if (error) {
+      if (
+        error.code === "23505" &&
+        error.message.includes("users_username_key")
+      ) {
+        alert("Username na ito ay ginagamit na. Pakisubukan ang iba.");
+      } else {
+        alert("Registration failed. Please check your credentials.");
+      }
       console.error("Registration error:", error);
-      alert("Registration failed. Please check your credentials.");
       setLoading(false);
       return;
     }
