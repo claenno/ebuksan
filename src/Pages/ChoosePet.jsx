@@ -31,7 +31,7 @@ const ChoosePet = () => {
               Choose your Pet
             </p>
             <div className="flex space-x-5 md:space-x-28 items-center justify-center">
-              {["pet1.png", "pet2.png", "pet3.png"].map((pet, index) => (
+              {["pet1.gif", "pet2.gif", "pet3.gif"].map((pet, index) => (
                 <div
                   key={index}
                   className={`justify-center flex w-[68.31px] h-[65.51px] md:w-[139.89px] md:h-[134.16px] bg-white rounded-[500px] cursor-pointer ${

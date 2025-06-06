@@ -108,27 +108,27 @@ const PetPage = () => {
   }, [petData?.experience, levelExp]);
 
   const getPetImage = (petid, level) => {
-    if (!petid || !level) return "./images/pet1.png"; // fallback
+    if (!petid || !level) return "./images/pet1.gif"; // fallback
 
-    if (level === 1) return `./images/pet${petid}.png`;
-    if (level === 2) return `./images/pet${petid}Evo2.png`;
-    if (level >= 3) return `./images/pet${petid}Evo3.png`;
+    if (level === 1) return `./images/pet${petid}.gif`;
+    if (level === 2) return `./images/pet${petid}Evo2.gif`;
+    if (level >= 3) return `./images/pet${petid}Evo3.gif`;
 
-    return "./images/pet1.png";
+    return "./images/pet1.gif";
   };
 
   // Helper function for evolution modal (fromLevel to toLevel)
   const getPetEvolutionImages = (petid, fromLevel, toLevel) => {
     const fromImg =
       fromLevel === 1
-        ? `./images/pet${petid}.png`
+        ? `./images/pet${petid}.gif`
         : fromLevel === 2
-        ? `./images/pet${petid}Evo2.png`
-        : `./images/pet${petid}Evo3.png`;
+        ? `./images/pet${petid}Evo2.gif`
+        : `./images/pet${petid}Evo3.gif`;
     const toImg =
       toLevel === 2
-        ? `./images/pet${petid}Evo2.png`
-        : `./images/pet${petid}Evo3.png`;
+        ? `./images/pet${petid}Evo2.gif`
+        : `./images/pet${petid}Evo3.gif`;
     return { fromImg, toImg };
   };
 

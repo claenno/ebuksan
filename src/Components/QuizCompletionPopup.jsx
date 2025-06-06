@@ -78,8 +78,11 @@ const QuizCompletionPopup = ({ username, petData, questions, onClose }) => {
         {petData.score}/{questions.length}
       </p>
       <p className="text-white text-[12px]">Tanong</p>
-      <p className="text-[18px] text-yellow-400 mt-3">
+      <p className="text-[18px] text-yellow-400 my-3">
         +{petData.totalExperience} EXP
+      </p>
+      <p className="text-white text-[12px]">
+        Nabuksan mo na ang susunod na aralin!
       </p>
       <div>
         <button
