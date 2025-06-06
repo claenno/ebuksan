@@ -10,7 +10,7 @@ const ChoosePet = () => {
 
   const handlePetSelect = (pet, index) => {
     setSelectedPet(pet);
-    setPetId(index);
+    setPetId(index + 1);
   };
 
   const handleConfirmation = () => {
