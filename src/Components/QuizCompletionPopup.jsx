@@ -73,7 +73,7 @@ const QuizCompletionPopup = ({ username, petData, questions, onClose }) => {
 
   return (
     <div className="min-w-[50%] max-w-[930px] flex flex-col items-center min-h-auto bg-gradient-to-b bg-[#b834c4] rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] p-4 sm:p-5">
-      <p className="text-white font-bold">Nakuha mo ang skor na:</p>
+      <p className="text-white font-bold">Nakuha mo ang iskor na:</p>
       <p className="text-yellow-400 text-[38px] font-bold">
         {petData.score}/{questions.length}
       </p>
