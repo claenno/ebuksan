@@ -28,18 +28,7 @@ const RegistrationForm = () => {
       return;
     }
 
-    // Get the current max id
-    let { data: maxIdData, error: maxIdError } = await supabase
-      .from("users")
-      .select("id")
-      .order("id", { ascending: false })
-      .limit(1);
-
-    let newId = 300;
-    if (maxIdData && maxIdData.length > 0 && maxIdData[0].id >= 300) {
-      newId = maxIdData[0].id + 1;
-    }
-
+    // No need to fetch or set id!
     const { data, error } = await supabase.from("users").insert([
       {
         username: username,
