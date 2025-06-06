@@ -31,12 +31,12 @@ const StudentVideos = () => {
         />
         <StudentVideoHolder
           src="/videos/video2.mp4"
-          title="Maligayang pagdating sa E-Buksan!"
+          title="Paano gamitin ang E-Buksan"
           poster="/images/intro-poster.jpg"
         />
         <StudentVideoHolder
           src="/videos/video3.mp4"
-          title="Maligayang pagdating sa E-Buksan!"
+          title="Mga Paalala at Gabay"
           poster="/images/intro-poster.jpg"
         />
       </div>

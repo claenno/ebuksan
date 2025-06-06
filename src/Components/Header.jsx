@@ -144,26 +144,31 @@ const Header = ({ setIsLoading, setLoadingMessage }) => {
         {/* Conditionally render buttons if not on Login or Register page */}
         {username && !noButtonMenu && (
           <>
-            <li className="text-xl text-white pt-5 text-right">
+            <li className="text-sm text-white pt-5 text-right">
               <Link to="/dashboard" onClick={closeMenu}>
                 Dashboard
               </Link>
               <div className="w-[162px] h-[3px] bg-[#57003e] mt-3" />
             </li>
-            <li className="text-xl text-white text-right">
+            <li className="text-sm text-white text-right">
               <Link to="/pet" onClick={closeMenu}>
                 Alaga
               </Link>
               <div className="w-[162px] h-[3px] bg-[#57003e] mt-3" />
             </li>
-            <li className="text-xl text-white text-right">
+            <li className="text-sm text-white text-right">
               <Link to="/about" onClick={closeMenu}>
-                Tunkol sa E-Buksan
+                Tungkol sa E-Buksan
               </Link>
+
+              <div className="w-[162px] h-[3px] bg-[#57003e] mt-3" />
+            </li>
+            <li className="text-sm text-white text-right">
+              <Link to="/studentVideos">Bidyo ng Studyante</Link>
               <div className="w-[162px] h-[3px] bg-[#57003e] mt-3" />
             </li>
             {userPermission === 2 && ( // Show Admin button only if permission is 2
-              <li className="text-xl text-white text-right">
+              <li className="text-sm text-white text-right">
                 <Link to="/adminDashboard" onClick={closeMenu}>
                   Admin
                 </Link>
@@ -171,7 +176,7 @@ const Header = ({ setIsLoading, setLoadingMessage }) => {
               </li>
             )}
             <li
-              className="text-xl text-white text-right cursor-pointer"
+              className="text-sm text-white text-right cursor-pointer"
               onClick={() => {
                 closeMenu();
                 setShowLogoutModal(true);
@@ -199,7 +204,7 @@ const Header = ({ setIsLoading, setLoadingMessage }) => {
               <Link to="/about">Tungkol sa E-Buksan</Link>
             </li>
             <li className="text-xl hover:text-white">
-              <Link to="/studentVideos">Tungkol sa Studyante</Link>
+              <Link to="/studentVideos">Bidyo ng Studyante</Link>
             </li>
             {userPermission === 2 && ( // Show Admin button only if permission is 2
               <li className="text-xl hover:text-white">

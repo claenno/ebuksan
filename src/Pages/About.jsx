@@ -11,15 +11,19 @@ const About = () => {
   return (
     <div className="bg-login-background bg-repeat bg-cover bg-center bg-fixed min-h-screen w-full">
       <div className="w-full bg-[#860074] md:px-20 px-10 py-6 flex items-center justify-center">
-        <h1 className="text-white text-2xl font-bold">Tunkol sa E-Buksan</h1>
+        <h1 className="text-white text-2xl font-bold">Tungkol sa E-Buksan</h1>
       </div>
       <h1 className="text-white text-lg font-bold text-center mt-4">
         {" "}
         Bionote
       </h1>
       <div className="max-w-5xl mx-auto px-5 py-6 space-y-8 flex flex-row flex-wrap items-center justify-center">
-        <img className="h-[300px] mr-8" src="/images/madam.png" alt="" />
-        <h1 className="text-white text-[18px]">
+        <img
+          className="h-[300px] mr-8 rounded-lg shadow-lg border-[5px] border-[#860074]"
+          src="/images/madam.png"
+          alt=""
+        />
+        <h1 className="text-white text-[18px] text-justify">
           Si Joseth C. Abiog ay isang guro ng Filipino na may labing-apat na
           taong karanasan sa pagtuturo. Ipinanganak noong Pebrero 14, 1988 sa
           Brgy. Mabato, Mauban, Quezon, siya ay kasalukuyang nagtuturo sa

@@ -106,15 +106,15 @@ const AdminDocumentHolder = () => {
               <div className="flex w-[80%] items-center gap-2">
                 <div className="flex flex-col gap-1 justify-start text-white">
                   <p className="text-[24px]">
-                    <b>Title:</b> {doc.docs_title}
+                    <b>Pamagat:</b> {doc.docs_title}
                   </p>
                   <hr />
                   <p>
-                    <b>Description:</b> {doc.docs_description}
+                    <b>Paglalarawan:</b> {doc.docs_description}
                   </p>
                   <hr />
                   <p>
-                    <b>Type:</b> {doc.docs_type}
+                    <b>Uri:</b> {doc.docs_type}
                   </p>
                 </div>
               </div>

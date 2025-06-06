@@ -81,7 +81,7 @@ const RegistrationForm = () => {
           <div className="flex justify-center items-center text-sm md:text-[15px] space-x-2.5">
             <input
               type="text"
-              placeholder="First Name"
+              placeholder="Unang Pangalan"
               required
               className=" pl-3 w-[121.23px] h-[28px] md:w-[163px] md:h-[34.65px] bg-white rounded-[5px]"
               value={firstname}
@@ -89,7 +89,7 @@ const RegistrationForm = () => {
             />
             <input
               type="text"
-              placeholder="Last Name"
+              placeholder="Apilyedo"
               required
               className=" pl-3 w-[121.23px] h-[28px] md:w-[163px] md:h-[34.65px]  bg-white rounded-[5px]"
               value={lastname}
@@ -104,7 +104,7 @@ const RegistrationForm = () => {
               onChange={(e) => setSchool(e.target.value)}
             >
               <option value="" disabled>
-                Select School
+                Anong Paaralan
               </option>
               {schools.map((schoolObj) => (
                 <option key={schoolObj.id} value={schoolObj.school_value}>
@@ -133,7 +133,7 @@ const RegistrationForm = () => {
             <input
               type="password"
               required
-              placeholder="Confirm Password"
+              placeholder="Siguraduhin ang Password"
               className=" pl-3 w-[249.71px] h-[28px] md:w-[335.74px] md:h-[34.65px] bg-white rounded-[5px]"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
@@ -145,7 +145,7 @@ const RegistrationForm = () => {
               disabled={loading}
               className="w-[249.71px] h-[28.22px] md:w-[335px] md:h-[34.65px] bg-gradient-to-r from-[#e48335] via-[#f97a53] to-[#ff6475] rounded-[15px] text-white"
             >
-              {loading ? "Processing..." : "Register Now"}
+              {loading ? "Inaayos" : "Magrehistro na"}
             </button>
           </div>
         </form>

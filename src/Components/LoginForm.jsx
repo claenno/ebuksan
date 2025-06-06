@@ -13,18 +13,18 @@ const LoginForm = ({ setIsLoading, setLoadingMessage }) => {
 
     // Basic validation
     if (username.length < 3) {
-      alert("Username must be at least 3 characters long.");
+      alert("Ang username ay dapat hindi bababa sa 3 na letra.");
       return;
     }
 
     if (password.length < 6) {
-      alert("Password must be at least 6 characters long.");
+      alert("Ang password ay dapat hindi bababa sa 6 na letra.");
       return;
     }
 
     const login = async () => {
       setIsLoading(true);
-      setLoadingMessage("Logging in...");
+      setLoadingMessage("Nagla-log in...");
 
       const { data, error } = await supabase
         .from("users")
@@ -35,7 +35,7 @@ const LoginForm = ({ setIsLoading, setLoadingMessage }) => {
 
       if (error || !data) {
         console.error("Login error:", error);
-        alert("Login failed. Please check your credentials.");
+        alert("Nabigo ang pag-login. Pakisuri ang iyong impormasyon.");
         setIsLoading(false);
         return;
       }
@@ -61,7 +61,7 @@ const LoginForm = ({ setIsLoading, setLoadingMessage }) => {
 
   const registerClick = () => {
     setIsLoading(true);
-    setLoadingMessage("Redirecting to Register...");
+    setLoadingMessage("Nagloload papuntang rehistro...");
 
     setTimeout(() => {
       setIsLoading(false);
@@ -73,7 +73,7 @@ const LoginForm = ({ setIsLoading, setLoadingMessage }) => {
     <>
       <div className="flex flex-col items-center w-[287.30px] h-[263px] bg-gradient-to-b from-[#ff8978] via-[#f3328d] to-[#ec3893] rounded-[10px] md:w-[402px] md:h-[368px]">
         <p className="font-extrabold text-white p-5 md:p-10 md:text-xl">
-          Mag Log in
+          Mag-login
         </p>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col justify-center items-center space-y-3">
@@ -100,7 +100,7 @@ const LoginForm = ({ setIsLoading, setLoadingMessage }) => {
                 type="submit"
                 className="text-xs font-normal md:text-[15px] w-[239.95px] h-[27.12px] bg-gradient-to-r from-[#e48335] via-[#f97a53] to-[#ff6475] rounded-[15px] md:w-[335.74px] md:h-[34.65px]"
               >
-                Mag Log in
+                Mag-login
               </button>
 
               <button
@@ -108,7 +108,7 @@ const LoginForm = ({ setIsLoading, setLoadingMessage }) => {
                 onClick={registerClick}
                 className="text-xs font-normal md:text-[15px] w-[239.95px] h-[27.12px] bg-gradient-to-r from-[#fe5f98] to-[#fe9299] rounded-[15px] md:w-[335.74px] md:h-[34.65px]"
               >
-                Mag Rehistro ng Account
+                Magrehistro ng Account
               </button>
             </div>
           </div>

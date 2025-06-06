@@ -1,35 +1,33 @@
-import React, { useState, useEffect }  from 'react'
-import PopUpQuiz from '../Components/PopUpQuiz'
+import React, { useState, useEffect } from "react";
+import PopUpQuiz from "../Components/PopUpQuiz";
 
 const QuizPage = () => {
+  const [timeLeft, setTimeLeft] = useState(30); // Paunang oras ay 30 segundo
 
-    const [timeLeft, setTimeLeft] = useState(30); // Initial time is 30 seconds
+  useEffect(() => {
+    // Tumigil kung ang timer ay umabot na sa 0
+    if (timeLeft === 0) {
+      // Maaari kang magdagdag ng lohika dito kapag tapos na ang oras
+      console.log("Tapos na ang oras!");
+      return;
+    }
 
-    useEffect(() => {
-        // Exit early if the timer reaches 0
-        if (timeLeft === 0) {
-            // You can add logic here for when the timer finishes
-            console.log("Time's up!");
-            return;
-        }
+    // I-set ang interval ng timer
+    const timerId = setInterval(() => {
+      setTimeLeft((prevTime) => prevTime - 1); // Bawasan ng 1 segundo
+    }, 1000);
 
-        // Set up the timer interval
-        const timerId = setInterval(() => {
-            setTimeLeft((prevTime) => prevTime - 1); // Decrease time by 1 second
-        }, 1000);
+    // Linisin ang interval kapag na-unmount o nagbago ang timeLeft
+    return () => clearInterval(timerId);
+  }, [timeLeft]); // I-re-run ang effect kapag nagbago ang timeLeft
 
-        // Clean up the interval on component unmount or when timeLeft changes
-        return () => clearInterval(timerId);
-    }, [timeLeft]); // Re-run the effect when timeLeft changes
-    return (
-        <>
-            <div className="bg-login-background bg-repeat bg-cover bg-center bg-fixed  min-h-screen w-screen justify-items-center px-5 pt-7 md:pt-10">
+  return (
+    <>
+      <div className="bg-login-background bg-repeat bg-cover bg-center bg-fixed min-h-screen w-screen justify-items-center px-5 pt-7 md:pt-10">
+        <PopUpQuiz />
+      </div>
+    </>
+  );
+};
 
-
-                <PopUpQuiz />
-            </div>
-        </>
-    )
-}
-
-export default QuizPage
+export default QuizPage;

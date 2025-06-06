@@ -147,6 +147,7 @@ const StudentsInformation = () => {
               <th className="p-2">Pangalan</th>
               <th className="p-2">Username</th>
               <th className="p-2">Paaralan</th>
+              <th className="p-2">Antas</th> {/* Added Level column */}
               <th className="p-2">Aprubado</th>
               <th className="p-2">Mga Gawain</th>
             </tr>
@@ -158,14 +159,26 @@ const StudentsInformation = () => {
                   {student.firstname} {student.lastname}
                 </td>
                 <td className="p-2">{student.username}</td>
-                <td className="p-2">{student.school}</td>
-                <td className="p-2">{student.approved ? "Oo" : "Hindi"}</td>
+                <td className="p-2">
+                  {
+                    // Find the school object by value and show its name
+                    schools.find((sch) => sch.school_value === student.school)
+                      ?.school_name || student.school
+                  }
+                </td>
+                <td className="p-2 text-center">{student.petlevel ?? "-"}</td>{" "}
+                {/* Show level */}
+                <td className="p-2 text-center">
+                  {student.approved ? "Oo" : "Hindi"}
+                </td>
                 <td className="p-2 flex gap-2">
                   <button
                     className="bg-[#ffcc00] text-black rounded px-2 py-1"
                     onClick={() => handleToggleApproved(student)}
                   >
-                    {student.approved ? "I-alis ang Pagpayag" : "Payagan"}
+                    {student.approved
+                      ? "Alisin ang Pag-aprobado"
+                      : "Payagan makapasok"}
                   </button>
                   <button
                     className="bg-blue-500 rounded px-2 py-1"
@@ -182,13 +195,6 @@ const StudentsInformation = () => {
                 </td>
               </tr>
             ))}
-            {filteredStudents.length === 0 && (
-              <tr>
-                <td colSpan={5} className="text-center p-4">
-                  Walang nahanap na estudyante.
-                </td>
-              </tr>
-            )}
           </tbody>
         </table>
       </div>

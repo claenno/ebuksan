@@ -22,7 +22,9 @@ const AdminMenuBar = () => {
               }
             >
               <img src="images/cameraIcon.png" alt="video" />
-              <p className="hidden md:block md:font-semibold md:pl-5">Videos</p>
+              <p className="hidden md:block md:font-semibold md:pl-5">
+                Mga Bidyo
+              </p>
             </NavLink>
             <NavLink
               to="/adminPowerPoint"
@@ -46,7 +48,9 @@ const AdminMenuBar = () => {
               }
             >
               <img src="images/wordIcon.png" alt="dcs" className="md:pr-5" />
-              <p className="hidden md:block md:pr-12 md:font-semibold">Word</p>
+              <p className="hidden md:block md:pr-12 md:font-semibold">
+                Dokumento
+              </p>
             </NavLink>
             {/* Upload Button */}
             <button
@@ -55,20 +59,22 @@ const AdminMenuBar = () => {
             >
               <img src="images/upload.png" alt="upload" className="md:pr-5" />
               <p className="hidden md:block md:pr-12 md:font-semibold">
-                Upload
+                Mag-Upload
               </p>
             </button>
 
             <NavLink
-                to="/adminusers"
-                className={({ isActive }) =>
-                    isActive
-                        ? "w-[46px] h-[42px] bg-[#ffcc00] flex items-center justify-center md:w-[202px] md:h-[42px] rounded-[10px]"
-                        : "w-[46px] h-[42px] bg-white flex items-center justify-center md:w-[202px] md:h-[42px] rounded-[10px]"
-                }
+              to="/adminusers"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-[46px] h-[42px] bg-[#ffcc00] flex items-center justify-center md:w-[202px] md:h-[42px] rounded-[10px]"
+                  : "w-[46px] h-[42px] bg-white flex items-center justify-center md:w-[202px] md:h-[42px] rounded-[10px]"
+              }
             >
-
-              <p className="hidden md:block md:pr-12 md:font-semibold">Students</p>
+              <img src="images/graduated.png" alt="" className="md:pr-5" />
+              <p className="hidden md:block md:pr-12 md:font-semibold">
+                Studyante
+              </p>
             </NavLink>
           </div>
 

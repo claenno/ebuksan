@@ -5,10 +5,9 @@ const MenuBar = () => {
   const navigate = useNavigate();
   const powePointClick = () => {
     navigate("/powerPoint");
-  }
+  };
   return (
     <>
-
       <div className="flex justify-between items-center pt-5">
         {/* Left side menu items */}
         <div className="flex space-x-2">
@@ -22,7 +21,9 @@ const MenuBar = () => {
             }
           >
             <img src="images/cameraIcon.png" alt="video" />
-            <p className="hidden md:block md:font-semibold md:pl-8">Videos</p>
+            <p className="hidden md:block md:font-semibold md:pl-8">
+              Mga Bidyo
+            </p>
           </NavLink>
           <NavLink
             to="/powerPoint"
@@ -33,7 +34,9 @@ const MenuBar = () => {
             }
           >
             <img src="images/powerPointIcon.png" alt="ppt" />
-            <p className="hidden md:block md:pl-5 md:font-semibold">PowerPoints</p>
+            <p className="hidden md:block md:pl-5 md:font-semibold">
+              PowerPoints
+            </p>
           </NavLink>
           <NavLink
             to="/word"
@@ -44,11 +47,11 @@ const MenuBar = () => {
             }
           >
             <img src="images/wordIcon.png" alt="dcs" className="md:pr-4" />
-            <p className="hidden md:block md:pr-12 md:font-semibold">Word</p>
+            <p className="hidden md:block md:pr-12 md:font-semibold">
+              Dokumento
+            </p>
           </NavLink>
         </div>
-
-
 
         <div className="relative left-3">
           <button
@@ -64,7 +67,9 @@ const MenuBar = () => {
             type="search"
             onFocus={() => setExpand(true)}
             onBlur={() => setExpand(false)}
-            className={`transition-all duration-300 h-[35.85px] bg-white rounded-[10px] px-2 pl-8 outline-none origin-right ${expand ? "w-[150px]" : "w-[35px]"}`}
+            className={`transition-all duration-300 h-[35.85px] bg-white rounded-[10px] px-2 pl-8 outline-none origin-right ${
+              expand ? "w-[150px]" : "w-[35px]"
+            }`}
             placeholder={expand ? "Search..." : ""}
           />
         </div>

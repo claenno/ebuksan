@@ -109,15 +109,15 @@ const AdminPowerPointHolder = () => {
               <div className="flex w-[80%] items-center gap-3">
                 <div className="flex flex-col gap-1 justify-start text-white">
                   <p className="text-[24px]">
-                    <b>Title:</b> {ppt.ppt_title}
+                    <b>Pamagat:</b> {ppt.ppt_title}
                   </p>
                   <hr />
                   <p>
-                    <b>Description:</b> {ppt.ppt_description}
+                    <b>Paglalarawan:</b> {ppt.ppt_description}
                   </p>
                   <hr />
                   <p>
-                    <b>Type:</b> {ppt.ppt_type}
+                    <b>Uri:</b> {ppt.ppt_type}
                   </p>
                 </div>
               </div>

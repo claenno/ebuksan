@@ -30,7 +30,9 @@ const WordPage = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 pt-5">
         {loading ? (
-          <p className="text-center text-white">Naglolad ang Documents...</p>
+          <p className="text-center text-white">
+            Naglo-load ng mga dokumento...
+          </p>
         ) : (
           documents.map((doc) => (
             <DocumentHolder
