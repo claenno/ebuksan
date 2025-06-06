@@ -197,7 +197,7 @@ const PetPage = () => {
               <div className="relative">
                 {/* Pet Image Over the Tree Trunk */}
                 <img
-                  className="absolute top-[-50px] md:top-[-70px] left-1/2 -translate-x-1/2 md:w-[180px] w-[120px] z-10"
+                  className="absolute top-[-50px] md:top-[-50px] left-1/2 -translate-x-1/2 md:w-[180px] w-[150px] z-10"
                   src={getPetImage(petData?.petid, petData?.petlevel)}
                   alt="Pet"
                 />
