@@ -137,7 +137,7 @@ const Header = ({ setIsLoading, setLoadingMessage }) => {
         ref={menuRef}
         className={`${
           menuOpen
-            ? "flex flex-col space-y-5 p-5 absolute top-[65px] right-2 w-[210px] h-[295px] bg-[#6c005d] shadow-lg z-50"
+            ? "flex flex-col space-y-5 p-5 absolute top-[65px] right-2 w-[210px] h-auto bg-[#6c005d] shadow-lg z-50"
             : "hidden"
         } md:hidden`}
       >
