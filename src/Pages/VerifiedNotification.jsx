@@ -11,7 +11,7 @@ const VerifiedNotification = () => {
   return (
     <>
       <div className="pt-[100px] bg-login-background bg-repeat bg-cover bg-center bg-fixed min-h-screen w-screen justify-items-center">
-        <div className="flex flex-col items-center p-5 w-[296px] h-[237px] md:w-[438px] md:h-[341px] rounded-[10px] bg-[url('/images/registrationFormBackground.png')] bg-repeat bg-cover bg-center bg-fixed">
+        <div className="flex flex-col items-center p-5 w-[296px] h-auto md:w-[438px] md:h-[341px] rounded-[10px] bg-[url('/images/registrationFormBackground.png')] bg-repeat bg-cover bg-center bg-fixed">
           <img
             src="/images/checkIcon.png"
             alt="Check Icon"
