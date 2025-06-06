@@ -42,7 +42,6 @@ const RegistrationForm = () => {
 
     const { data, error } = await supabase.from("users").insert([
       {
-        id: newId,
         username: username,
         password: password,
         firstname: firstname,
